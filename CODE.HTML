@@ -1,0 +1,103 @@
+<HTML>
+<HEAD><TITLE>PYTHON CODE FOR HAND CRICKET</TITLE>
+</HEAD>
+<BODY STYLE="FONT-SIZE:30PX">
+<PRE>
+print("welcome to hand cricket mania 10 ball match".center(352))
+import random
+a=int(input("choose 1.heads 2.tails"))
+s=(random.randint(1,2))
+r=0
+p=0
+if a==s:
+    print("congrats you won the toss")
+    e=int(input("choose 1.batting  2.bowling"))
+    i=0
+    bowl="opponent elected bowling"
+else:
+    print("sorry! you loose the toss ")
+    
+    bat="opponent elected batting"
+    bowl="opponent elected bowling"
+    b=["opponent elected batting","opponent elected bowling"]
+    i=(random.choice(b))
+    print(i)
+    e=4
+if e==1 or i==bowl:
+    print("best of luck for batting".center(123))
+    
+    while(p<10):
+     c=(random.randint(1,6))
+     t=int(input("enter the no between 1 to 6:  ")) 
+     if(c==t):
+         print(" you got out")
+         break
+     else:
+         r=r+t
+         p=p+1
+    print("your score is %d"%r)
+    r=r+1
+    print("      you have to defend %d"%r)
+    print("                 best of luck")
+    ww=0 
+    ee=0 
+    while(ww<10):
+       
+     cc=(random.randint(1,6))
+     tt=int(input("enter the no between 1 to 6:  ")) 
+     
+     
+     if(cc==tt):
+        
+         print(" computer  got out")
+         break
+     else:
+         ee=ee+tt
+         ww=ww+1
+         if(ee>=r):
+             print("computer finished")
+             break
+    print("computer score is %d"%ee)
+    min = "you win" if r > ee else "you lose"
+    print(min)
+    
+else:
+    print("best of luck for bowling".center(123))
+    
+    while(p<10):
+     c=(random.randint(1,6))
+     t=int(input("enter the no between 1 to 6:  ")) 
+     if(c==t):
+         print(" computer got out")
+         break
+     else:
+         r=r+t
+         p=p+1
+    print("computer score is %d"%r)
+    r=r+1
+    print("      you have to chase%d"%r)
+    print("                 best of luck")
+    ww=0 
+    ee=0 
+    while(ww<10):
+       
+     cc=(random.randint(1,6))
+     tt=int(input("enter the no between 1 to 6:  ")) 
+     
+     
+     if(cc==tt):
+        
+         print(" you  got out")
+         break
+     else:
+         ee=ee+tt
+         ww=ww+1
+         if(ee>=r):
+             print("you finished")
+             break
+    print("your score is %d"%ee)
+    min = "you lose" if r > ee else "you win"
+    print(min)
+</PRE>
+</BODY>
+</HTML>
